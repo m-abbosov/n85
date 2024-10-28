@@ -1,0 +1,254 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.boxs {
+  padding-top: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.box {
+  width: 250px;
+  height: 250px;
+  background-color: burlywood;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 50px;
+}
+
+/* .box:first-child {
+  background-color: darkgoldenrod;
+}
+
+.box:last-child {
+  background-color: darkmagenta;
+}
+
+.box:nth-child(2) {
+  background-color: darkturquoise;
+} */
+
+/* .box:nth-child(odd) {
+  background-color: darksalmon;
+}
+
+.box:nth-child(even) {
+  background-color: darkorange;
+} */
+
+/* .box:nth-child(3n + 1) {
+  background-color: darksalmon;
+} */
+
+/* .box:not(:nth-child(odd)) {
+  border: 2px solid red;
+} */
+
+/* input {
+  display: block;
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+
+  font-size: 20px;
+
+  margin: 20px auto;
+} */
+
+.card {
+  /* position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); */
+  margin: 40px;
+  width: 300px;
+  height: 400px;
+  background-color: darkorange;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  transition: all 0.2s ease;
+  animation-name: spin;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  /* animation-delay: 5s; */
+  /* animation-timing-function: linear;
+  animation-fill-mode: both; */
+  /* animation-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1); */
+  animation: spin 2s linear 0s infinite alternate;
+  /* animation: name duration timing-function delay iteration-count direction
+    fill-mode; */
+}
+
+.card:hover {
+  /* transform: skew(10deg, 20deg) rotateY(180deg) translate(30px, -40px); */
+
+  /* transform: translate3d(20px, 40px, 100px); */
+  /* transform: rotate3d(1, 2, 1, 30deg); */
+  /* transform: scale3d(1.1, 1.1, 1.6); */
+}
+
+/* .card::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border: 5px solid darkmagenta;
+  transform: scale(1.1);
+}
+
+.card::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border: 5px solid darkmagenta;
+  transform: scale(1.2);
+} */
+
+@keyframes spin {
+  0% {
+    transform: translate(0, 0);
+  }
+  25% {
+    transform: translate(500px, 0);
+  }
+
+  50% {
+    transform: translate(500px, 500px);
+  }
+
+  100% {
+    transform: translate(0, 500px);
+  }
+}
+
+.loading {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 5px solid darkmagenta;
+  border-top-color: transparent;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.lds-circle,
+.lds-circle div {
+  box-sizing: border-box;
+}
+.lds-circle {
+  display: inline-block;
+  transform: translateZ(1px);
+}
+.lds-circle > div {
+  display: inline-block;
+  width: 64px;
+  height: 64px;
+  margin: 8px;
+  background: red;
+  border-radius: 50%;
+  animation: lds-circle 2.4s cubic-bezier(0, 0.2, 0.8, 1) infinite;
+}
+@keyframes lds-circle {
+  0%,
+  100% {
+    animation-timing-function: cubic-bezier(0.5, 0, 1, 0.5);
+  }
+  0% {
+    transform: rotateY(0deg);
+  }
+  50% {
+    transform: rotateY(1800deg);
+    animation-timing-function: cubic-bezier(0, 0.5, 0.5, 1);
+  }
+  100% {
+    transform: rotateY(3600deg);
+  }
+}
+
+/* HTML: <div class="loader"></div> */
+.loader {
+  width: 70px;
+  height: 70px;
+  padding: 10px;
+  box-sizing: border-box;
+  background: #fff;
+  mix-blend-mode: darken;
+  display: grid;
+  filter: blur(4px) contrast(10) hue-rotate(270deg);
+}
+.loader:before,
+.loader:after {
+  content: "";
+  grid-area: 1/1;
+  animation: l2 3s infinite linear;
+  background: #ff00ff;
+  border-radius: 50%;
+}
+.loader:after {
+  animation-delay: -0.8s;
+}
+@keyframes l2 {
+  12.5% {
+    border-radius: 37% 63% 70% 30% / 30% 62% 38% 70%;
+  }
+  25% {
+    border-radius: 84% 16% 15% 85% / 55% 79% 21% 45%;
+  }
+  37.5% {
+    border-radius: 73% 27% 74% 26% / 64% 32% 68% 36%;
+  }
+  50% {
+    border-radius: 73% 27% 18% 82% / 52% 32% 68% 48%;
+  }
+  62.5% {
+    border-radius: 33% 67% 18% 82% / 52% 75% 25% 48%;
+  }
+  75% {
+    border-radius: 12% 88% 69% 31% / 10% 66% 34% 90%;
+  }
+  87.5% {
+    border-radius: 50% 50% 70% 30% / 52% 62% 38% 48%;
+  }
+}
+
+#loading {
+  position: fixed;
+  background-color: white;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+  transition: 0.5s;
+}
+
+#loading.loading-none {
+  opacity: 0;
+  z-index: -1;
+}
