@@ -1,0 +1,29 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  font-family: sans-serif;
+}
+
+header {
+  display: flex;
+  padding: 20px 80px;
+  justify-content: space-between;
+  align-items: center;
+  background-color: darkcyan;
+}
+
+header nav {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+header nav a {
+  text-decoration: none;
+  color: white;
+}
