@@ -1,0 +1,19 @@
+@import "./style/mixins";
+
+.box {
+  @include box-style(200px, 200px, 10px, 10px, brown);
+  @extend %color-shadow;
+
+  &:hover {
+    @include box-hover(1, 1.02);
+  }
+}
+
+.card {
+  @include box-style(300px, 300px, 15px, 15px, darkcyan);
+  @extend %color-shadow;
+
+  &:hover {
+    @include box-hover(1, 1.02);
+  }
+}

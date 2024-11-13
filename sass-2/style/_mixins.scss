@@ -1,0 +1,18 @@
+@mixin box-style($width, $height, $padding, $border-radius, $background-color) {
+  width: $width;
+  height: $height;
+  padding: $padding;
+  border-radius: $border-radius;
+  background-color: $background-color;
+  transition: all 0.3s ease;
+}
+
+@mixin box-hover($opacity, $scale) {
+  opacity: $opacity;
+  transform: scale($scale);
+}
+
+%color-shadow {
+  color: red;
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.3);
+}
