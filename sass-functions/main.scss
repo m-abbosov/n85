@@ -1,0 +1,5 @@
+$primary-color: blue;
+
+@debug $primary-color;
+@warn "This is a warning message!";
+@error "This is an error message!";
