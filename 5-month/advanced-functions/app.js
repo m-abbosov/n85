@@ -77,3 +77,19 @@
 //     })
 // listener(document.getElementById("edit"), "Edit Btn Clicked!")
 
+
+
+function test() {
+    let a = 0
+    return function () {
+        a++
+        return a
+    }
+}
+
+const counter = test()
+
+console.log(counter());
+console.log(counter());
+console.log(counter());
+console.log(counter());
