@@ -39,20 +39,20 @@
 
 
 
-class Ulov {
-    #name;
+// class Ulov {
+//     #name;
 
-    get getName() {
-        return this.#name
-    }
+//     get getName() {
+//         return this.#name
+//     }
 
-    set setName(newName) {
-        this.#name = newName
-    }
-    // walking() {
-    //     console.log(`${this.name} harakatlanayapti...`);
-    // }
-}
+//     set setName(newName) {
+//         this.#name = newName
+//     }
+// walking() {
+//     console.log(`${this.name} harakatlanayapti...`);
+// }
+// }
 
 // class Car extends Ulov {
 
@@ -72,7 +72,63 @@ class Ulov {
 //     }
 // }
 
-const ulov1 = new Ulov()
-ulov1.setName = "Eshshak"
-console.log(ulov1.getName);
+// const ulov1 = new Ulov()
+// ulov1.setName = "Eshshak"
+// console.log(ulov1.getName);
 
+
+
+// class Animal {
+//     constructor(name, type, sound) {
+//         this.name = name;
+//         this.type = type;
+//         this.sound = sound
+//     }
+
+//     makeSound() {
+//         console.log(`${this.name} ovozi ${this.sound}...`);
+//     }
+// }
+
+
+// class Cat extends Animal {
+//     constructor(name, type, sound, age) {
+//         super(name, sound, type);
+//         this.age = age;
+//     }
+
+//     getAge() {
+//         console.log(`${this.name} ${this.age} yoshda`);
+//     }
+// }
+
+// const animal1 = new Cat("Muiza", "BSh", "meow", 2)
+
+// animal1.getAge()
+
+
+// class Car {
+//     constructor(brand, model, year, mileage) {
+//         this.brand = brand;
+//         this.model = model;
+//         this.year = year;
+//         this.mileage = mileage
+//     }
+//     drive(km) {
+//         this.mileage += km;
+//     }
+//     getMileage() {
+//         console.log(`Mashina ${this.mileage}km yurgan.`);
+//     }
+//     getCarAge() {
+//         console.log(`Mashinaning yoshi ${new Date().getFullYear() - this.year}`);
+//     }
+// }
+
+
+// const bmw = new Car("BMW", "M5", 2018, 13000)
+
+// bmw.getCarAge()
+// bmw.getMileage()
+// bmw.drive(20)
+// bmw.getMileage()

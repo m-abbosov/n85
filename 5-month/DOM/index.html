@@ -13,21 +13,41 @@
         padding: 0;
         box-sizing: border-box;
     }
+
+
+    ul {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 10px;
+        list-style: none;
+        padding: 30px;
+    }
+
+    li {
+        padding: 10px;
+        background-color: antiquewhite;
+        border-radius: 10px;
+    }
+
+    .address {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .address p {
+        font-size: 10px;
+        margin-top: 20px;
+        color: red;
+    }
 </style>
 
 <body>
-    <h1>Hello World 1</h1>
-    <h1>Hello World</h1>
-    <h1>Hello World</h1>
-    <p class="text">1-so'z</p>
-    <p id="second">2-so'z</p>
-    <p class="text">3-so'z</p>
-    <p>4-so'z</p>
-
-    <img src="" alt="">
-    <picture>
-        <source src="" srcset="">
-    </picture>
+    <ul id="list">
+    </ul>
+    <strong>a</strong>
+    <b>a</b>
+    <script src="./data.js"></script>
     <script src="./app.js"></script>
 </body>
 
