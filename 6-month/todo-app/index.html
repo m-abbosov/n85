@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: cadetblue;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .todo {
+            height: 60vh;
+            background-color: white;
+            padding: 10px;
+            border-radius: 10px;
+            overflow-y: auto;
+        }
+
+        .todo ul {
+            list-style: none;
+            margin-top: 10px;
+            padding-top: 10px;
+            border-top: 1px dotted black;
+        }
+
+        .todo li {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            gap: 10px;
+            margin: 5px;
+        }
+
+        .todo li label {
+            margin-right: auto;
+        }
+
+        button {
+            cursor: pointer;
+        }
+
+        li.done label {
+            font-style: italic;
+            text-decoration: line-through;
+            color: gray;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="todo">
+        <form id="form">
+            <input placeholder="Add somthing..." type="text" id="input">
+            <button type="submit">Add</button>
+        </form>
+
+        <ul id="todo-list">
+        </ul>
+    </div>
+    <script src="./app.js"></script>
+</body>
+
+</html>

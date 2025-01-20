@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            height: 200vh;
+            width: 100vw;
+            overflow-x: hidden;
+        }
+
+        #btn {
+            padding: 10px 20px;
+            border: none;
+            background-color: darkkhaki;
+            font-size: 18px;
+            color: rgb(255, 255, 255);
+            cursor: pointer;
+        }
+
+        p {
+            font-size: 24px;
+            margin-left: 20px;
+        }
+
+        #back-top {
+            position: fixed;
+            bottom: 50px;
+            right: 50px;
+            transition: all 0.3s ease;
+        }
+
+        .btn {
+            transform: translateX(300px)
+        }
+
+        .show {
+            transform: translateX(0)
+        }
+    </style>
+</head>
+
+<body>
+    <p id="counter">0</p>
+    <button id="minus">Minus</button>
+    <button id="reset">Reset</button>
+    <button id="add">Add</button>
+
+    <button class="btn" id="back-top">TOP</button>
+    <script src="./app.js"></script>
+</body>
+
+</html>
